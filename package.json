@@ -1,20 +1,8 @@
 {
-  "name": "ringcentral-web-phone",
-  "version": "0.8.9",
+  "name": "ivhp-ringcentral-web-call-demo",
+  "version": "1.0.0",
   "scripts": {
-    "test": "npm run test:ut && npm run test:e2e",
-    "test:coverage": "cat .coverage/lcov.info | coveralls -v",
-    "test:e2e": "jest --config jest.config.e2e.js --runinband",
-    "test:ut": "jest --config jest.config.ut.js",
-    "build": "npm run build:tsc && npm run build:webpack",
-    "build:tsc": "tsc",
-    "build:webpack": "cross-env node_env=production webpack --config webpack.config.js --progress --color",
     "start": "webpack-dev-server --config webpack.config.js --progress --color",
-    "server": "http-server --port ${port:-8080}",
-    "watch": "npm-run-all --print-label --parallel \"build:** -- --watch\"",
-    "lint": "eslint --cache --cache-location node_modules/.cache/eslint --fix",
-    "lint:all": "npm run lint \"src/**/*.ts\" \"demo/**/*.js\"",
-    "lint:staged": "lint-staged",
     "postinstall": "tsc"
   },
   "dependencies": {
@@ -82,7 +70,7 @@
   },
   "homepage": "https://github.com/ringcentral/ringcentral-web-phone",
   "engines": {
-    "node": ">=0.10.36"
+    "node": "16.15.0"
   },
   "license": "MIT"
 }
